@@ -18,6 +18,7 @@ code {
   --color-ascent: #B9FFB7;
   --color-light:#fafafa;
   --color-dark:#331832;
+  --color-purple-variant:#DECDF5;
   --bg-dark: var(--color-dark);
   --bg-light: var(--color-light);
   --text-light:var(--color-light);
