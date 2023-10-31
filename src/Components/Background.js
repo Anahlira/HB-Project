@@ -53,12 +53,18 @@ function Background() {
 
     // ========= SCENE LOOK ==========
     scene.background = new THREE.Color("#331832");
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(0, 0, 1);
+    const light = new THREE.DirectionalLight(0xffffff, 0.7);
+    light.position.set(0, -1, 2);
     scene.add(light);
+    const backLight = new THREE.DirectionalLight(0xffffff, 1);
+    backLight.position.set(0, 0, -1);
+    scene.add(backLight);
+
+    // Camera
+    camera.position.z = 4;
 
     // Plane declaration
-    const geometry = new THREE.PlaneGeometry(19, 15, 19, 17);
+    const geometry = new THREE.PlaneGeometry(50, 50, 30, 30);
     const material = new THREE.MeshPhongMaterial({
       side: THREE.DoubleSide,
       flatShading: true,
@@ -92,8 +98,7 @@ function Background() {
       new THREE.BufferAttribute(new Float32Array(colors), 3)
     );
 
-    // camera and animation
-    camera.position.z = 3;
+    // animation
 
     const changeVertColor = (inters, pl, color) => {
       // vert 1
@@ -113,9 +118,23 @@ function Background() {
       pl.needsUpdate = true;
     };
 
+    let frame = 0;
     const animate = function () {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
+
+      // Movement
+      frame += 0.01;
+      const { array, originalPosition, randomValues } =
+        plane.geometry.attributes.position;
+      for (let i = 0; i < array.length; i += 6) {
+        // x
+        array[i] = originalPosition[i] + Math.cos(frame) * 0.005;
+
+        // y
+        array[i + 1] = originalPosition[i + 1] + Math.sin(frame) * 0.001;
+      }
+      plane.geometry.attributes.position.needsUpdate = true;
 
       // Hover color change
       raycaster.setFromCamera(mouse, camera);
@@ -134,6 +153,7 @@ function Background() {
         };
 
         changeVertColor(inters, color, innitialColor);
+        // smooth stransition from hover color
         gsap.to(hoverColor, {
           r: innitialColor.r,
           g: innitialColor.g,
