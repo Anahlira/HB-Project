@@ -23,6 +23,7 @@ code {
   --bg-light: var(--color-light);
   --text-light:var(--color-light);
   --text-dark: var(--color-dark);
+  --test-dark07: #331832bf;
 
   --text-size--small: 16px;
   --text-size--medium: 20px;

@@ -3,14 +3,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
 }
 .titleBg{
     /* background-color: var(--bg-dark); */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     padding: 64px 0;
-    height: 15vh;
+    height: 25%;
 }
 
 .title{
@@ -31,11 +32,15 @@
 .authForm {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    
+    justify-content: flex-start;
     align-items: center;
     gap: 16px;
     align-self: stretch;
     padding: 64px 0;
     align-content: center;
-    flex-wrap: wrap;
+
+    background-color: var(--color-purple-variant);
 }

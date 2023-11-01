@@ -1,4 +1,3 @@
-import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import "./Authentication.css";
 import "./Background";
 import Background from "./Background";

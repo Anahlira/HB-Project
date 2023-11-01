@@ -1,4 +1,4 @@
-import Input from "./Input";
+import Input from "./InputComponent/Input";
 
 function Login() {
   return (
