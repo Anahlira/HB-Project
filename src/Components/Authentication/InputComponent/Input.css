@@ -1,3 +1,17 @@
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputBox p{
+    margin: 6px;
+
+    font-size: var(--text-size--small);
+    font-weight: 400px;
+    color: red;
+}
+
 .field {
     position: relative;
     display: flex;
@@ -31,11 +45,18 @@
 
     text-overflow: ellipsis;
     transform-origin: top left;
-    transform: translate(40px, 33px) scale(1);
     transition: 0.5s;
 
     z-index: 1;
     pointer-events: none;
+}
+
+.labelUp {
+    transform: translate(40px, 33px) scale(1);
+}
+
+.labelPlaceholder{
+    transform: translate(16px, -1px) scale(1);
 }
 
 .field input {
@@ -54,4 +75,8 @@
 }
 .field input:focus + label{
     transform: translate(16px, -1px) scale(1);
+}
+
+.errorBorder {
+    border: solid red 1px;
 }

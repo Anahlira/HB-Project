@@ -1,0 +1,12 @@
+.btn {
+    padding: 8px 8px;
+    width: 280px;
+
+    text-transform: uppercase;
+    font-size: var(--text-size--medium);
+    color: var(--text-dark);
+    font-weight: 500;
+    border-radius: 20px;
+    background: var(--color-ascent);
+    border: solid var(--color-dark) 1px;
+}
