@@ -4,8 +4,8 @@ const Login = () => {
   return (
     <>
       <form className="authForm">
-        <Input></Input>
-        <Input></Input>
+        <Input type="email"></Input>
+        <Input type="password"></Input>
       </form>
     </>
   );
