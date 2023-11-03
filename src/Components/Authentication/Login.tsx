@@ -1,6 +1,6 @@
 import Input from "./InputComponent/Input";
 
-function Login() {
+const Login = () => {
   return (
     <>
       <form className="authForm">
@@ -9,6 +9,6 @@ function Login() {
       </form>
     </>
   );
-}
+};
 
 export default Login;

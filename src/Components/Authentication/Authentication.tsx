@@ -3,7 +3,7 @@ import "./Background";
 import Background from "./Background";
 import Login from "./Login";
 
-function Authentication() {
+const Authentication = () => {
   return (
     <div className="AuthPage">
       <div id="titleHomeScreen" className="titleBg">
@@ -15,6 +15,6 @@ function Authentication() {
       <Login></Login>
     </div>
   );
-}
+};
 
 export default Authentication;

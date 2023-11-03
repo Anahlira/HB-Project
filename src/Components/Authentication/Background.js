@@ -2,7 +2,7 @@ import "./Background.css";
 import * as THREE from "three";
 import gsap from "gsap";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 function Background() {
   const refContainer = useRef(null);
@@ -125,8 +125,7 @@ function Background() {
 
       // Movement
       frame += 0.01;
-      const { array, originalPosition, randomValues } =
-        plane.geometry.attributes.position;
+      const { array, originalPosition } = plane.geometry.attributes.position;
       for (let i = 0; i < array.length; i += 6) {
         // x
         array[i] = originalPosition[i] + Math.cos(frame) * 0.005;

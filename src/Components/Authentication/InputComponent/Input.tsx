@@ -1,9 +1,10 @@
 import "./Input.css";
 import IconProfile from "../Icon-svg.js/IconProfile";
 
+interface PropsI {}
 // props to pass:
 // type of input
-function Input() {
+const Input = (props: PropsI) => {
   return (
     <div className="field">
       <IconProfile></IconProfile>
@@ -19,6 +20,6 @@ function Input() {
       <label htmlFor="email">Email Address</label>
     </div>
   );
-}
+};
 
 export default Input;

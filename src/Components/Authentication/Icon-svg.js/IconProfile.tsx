@@ -1,4 +1,4 @@
-function IconProfile() {
+const IconProfile = () => {
   return (
     <svg
       width="18"
@@ -17,6 +17,6 @@ function IconProfile() {
       />
     </svg>
   );
-}
+};
 
 export default IconProfile;
