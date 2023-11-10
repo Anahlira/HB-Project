@@ -1,46 +1,57 @@
-.AuthPage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+.AuthPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
-.titleBg{
-    /* background-color: var(--bg-dark); */
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 64px 0;
-    height: 25%;
-}
-
-.title{
-    margin: 0;
-    color:var(--text-light);
-
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 97.4%;
-    letter-spacing: -5.12px;
+.titleBg {
+  /* background-color: var(--bg-dark); */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 64px 0;
+  height: 25%;
 }
 
-.titleAscent{
-    color: var(--color-ascent);
+.title {
+  margin: 0;
+  color: var(--text-light);
+
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 97.4%;
+  letter-spacing: -5.12px;
+}
+
+.titleAscent {
+  color: var(--color-ascent);
+}
+
+.authScreen {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  padding: 64px 0;
+  align-content: center;
+
+  background-color: var(--color-purple-variant);
 }
 
 .authForm {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100%;
-    
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
-    align-self: stretch;
-    padding: 64px 0;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
 
-    background-color: var(--color-purple-variant);
+  width: 100%;
+  max-width: 380px;
 }

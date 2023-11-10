@@ -28,17 +28,17 @@ const Login = () => {
   });
 
   return (
-    <>
+    <div className="authScreen">
       <form className="authForm" onSubmit={formik.handleSubmit}>
         <Input key="1" type="email" formik={formik}></Input>
         <Input key="2" type="password" formik={formik}></Input>
         {/* <button type="submit" disabled={formik.isSubmitting}>
           Submit
         </button> */}
-        <Button />
+        <Button text={"submit"} type={"main"} />
       </form>
-      <div>{formik.touched.password}</div>
-    </>
+      <Button text={"register"} type={"secondary"} />
+    </div>
   );
 };
 

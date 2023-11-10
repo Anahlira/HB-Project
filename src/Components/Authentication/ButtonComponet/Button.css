@@ -1,12 +1,29 @@
 .btn {
-    padding: 8px 8px;
-    width: 280px;
+  padding: 8px 8px;
+  width: 280px;
 
-    text-transform: uppercase;
-    font-size: var(--text-size--medium);
-    color: var(--text-dark);
-    font-weight: 500;
-    border-radius: 20px;
-    background: var(--color-ascent);
-    border: solid var(--color-dark) 1px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--text-dark);
+
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.btnMain {
+  background: var(--color-ascent);
+  border: solid var(--color-dark) 1px;
+}
+
+.btnSecondary {
+  background: var(--color-light);
+  border: solid var(--color-light) 1px;
+}
+
+.btn:hover {
+  font-weight: 400;
+
+  background-color: var(--color-dark);
+  color: var(--text-light);
+  cursor: pointer;
 }
