@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Authentication from "./Components/Authentication/Authentication";
+import Authentication from "./pages/Authentication/Authentication";
 
 const App = () => {
   return (

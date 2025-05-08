@@ -1,7 +1,7 @@
 import "./Authentication.css";
-import "./Background";
-import Background from "./Background";
-import Login from "./Login";
+import "../../Components/Authentication/Background";
+import Background from "../../Components/Authentication/Background";
+import Login from "../../Components/Authentication/Login";
 
 const Authentication = () => {
   return (
