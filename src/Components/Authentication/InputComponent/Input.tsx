@@ -9,7 +9,6 @@ interface PropsI {
 }
 
 const Input = (props: PropsI) => {
-  const [changed, setChanged] = useState(false);
   const [err, setErr] = useState(false);
 
   const labelText = {
@@ -22,18 +21,11 @@ const Input = (props: PropsI) => {
     password: <IconLock />,
   }[props.type];
 
-  const value = {
-    email: props.formik.values.email,
-    password: props.formik.values.password,
-  }[props.type];
+  const value = props.formik.values[props.type];
 
   useEffect(() => {
-    if (value === props.formik.initialValues[props.type]) {
-      setChanged(false);
-    } else setChanged(true);
-
     setErr(props.formik.errors[props.type] && props.formik.touched[props.type]);
-  }, [value]);
+  }, [props.formik.errors, props.formik.touched, value, props.type]);
 
   return (
     <div className="inputBox">
@@ -49,7 +41,7 @@ const Input = (props: PropsI) => {
           value={value}
         />
         <label
-          className={changed ? "labelPlaceholder" : "labelUp"}
+          className={value !== "" ? "labelPlaceholder" : "labelUp"}
           htmlFor="email"
         >
           {labelText}
